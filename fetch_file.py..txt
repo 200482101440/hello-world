@@ -1,0 +1,14 @@
+import requests
+
+
+url = "https://raw.githubusercontent.com/<your-200482101440>/<hello-world>/main/hello.py"
+
+# Send a GET request to fetch the content of the file
+response = requests.get(url)
+
+# Check if the request was successful
+if response.status_code == 200:
+    print("Script fetched successfully!")
+    print(response.text)  # This will print the content of hello.py
+else:
+    print(f"Failed to fetch the script. Status code: {response.status_code}")
